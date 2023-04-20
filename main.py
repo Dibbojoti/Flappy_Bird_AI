@@ -50,7 +50,6 @@ class Bird:
     def jump(self):
         """
         make the bird jump
-        :return: None
         """
         self.vel = -10.5
         self.tick_count = 0
@@ -59,7 +58,7 @@ class Bird:
     def move(self):
         """
         make the bird move
-        :return: None
+       
         """
         self.tick_count += 1
 
@@ -86,7 +85,7 @@ class Bird:
         """
         draw the bird
         :param win: pygame window or surface
-        :return: None
+       
         """
         self.img_count += 1
 
@@ -115,7 +114,7 @@ class Bird:
     def get_mask(self):
         """
         gets the mask for the current image of the bird
-        :return: None
+        
         """
         return pygame.mask.from_surface(self.img)
 
@@ -132,7 +131,7 @@ class Pipe():
         initialize pipe object
         :param x: int
         :param y: int
-        :return" None
+        
         """
         self.x = x
         self.height = 0
@@ -166,7 +165,7 @@ class Pipe():
         """
         draw both the top and bottom of the pipe
         :param win: pygame window/surface
-        :return: None
+        
         """
         # draw top
         win.blit(self.PIPE_TOP, (self.x, self.top))
@@ -206,7 +205,7 @@ class Base:
         """
         Initialize the object
         :param y: int
-        :return: None
+       
         """
         self.y = y
         self.x1 = 0
@@ -215,7 +214,7 @@ class Base:
     def move(self):
         """
         move floor so it looks like its scrolling
-        :return: None
+        
         """
         self.x1 -= self.VEL
         self.x2 -= self.VEL
@@ -229,7 +228,7 @@ class Base:
         """
         Draw the floor. This is two images that move together.
         :param win: the pygame surface/window
-        :return: None
+        
         """
         win.blit(self.IMG, (self.x1, self.y))
         win.blit(self.IMG, (self.x2, self.y))
@@ -398,7 +397,6 @@ def run(config_file):
     """
     runs the NEAT algorithm to train a neural network to play flappy bird.
     :param config_file: location of config file
-    :return: None
     """
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation,
