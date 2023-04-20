@@ -151,7 +151,6 @@ class Pipe():
     def set_height(self):
         """
         set the height of the pipe, from the top of the screen
-        :return: None
         """
         self.height = random.randrange(50, 450)
         self.top = self.height - self.PIPE_TOP.get_height()
@@ -160,7 +159,6 @@ class Pipe():
     def move(self):
         """
         move pipe based on vel
-        :return: None
         """
         self.x -= self.VEL
 
